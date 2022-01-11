@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasileiro ou Estrangeiro</title>
+    <style>
+        body{
+            background-color: blueviolet;
+            color: cornsilk;
+        }
+        #res{
+            color: rgb(217, 237, 3);
+        }
+        strong{
+            
+            color: rgb(250, 245, 245);
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Diga de qual país voce nasceu?</h1>
+    <input type="text" name="txtp" id="txtp">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id = 'res'>
+
+
+    </div>
+
+    <script>
+        function verificar(){
+            var p = window.document.getElementById('txtp')
+            var resp = window.document.getElementById('res')
+            var pais = String(p.value)
+            resp.innerHTML = `Se você nasceu no pais ${pais},`
+            if(pais == 'Brasil'){
+                resp.innerHTML += `então você é <strong>Brasileiro</strong> `
+                }
+            else{
+                resp.innerHTML += `então você é <strong>Extrangeiro</strong>`
+            }    
+            }
+    </script>
+</body>
+</html>
